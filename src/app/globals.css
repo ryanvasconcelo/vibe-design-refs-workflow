@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: CohereText;
+  src: url("/fonts/CohereText-Regular.870d4a70.woff2") format("woff2"),
+    url("/fonts/CohereText-Regular.e692f006.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CohereHeadline;
+  src: url("/fonts/CohereHeadline-Regular.514cdc87.woff2") format("woff2"),
+    url("/fonts/CohereHeadline-Regular.a486022c.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CohereHeadline;
+  src: url("/fonts/CohereHeadline-Bold.e6075385.woff2") format("woff2"),
+    url("/fonts/CohereHeadline-Bold.f12a85f0.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CohereMono;
+  src: url("/fonts/CohereMono-Regular.d3cdd41a.woff2") format("woff2"),
+    url("/fonts/CohereMono-Regular.539ad42c.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #F7F6F3;
+  --foreground: #1A1A1A;
+  --forest: #1B3022;
+  --cyan-slate: #3E5C6B;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-forest: var(--forest);
+  --color-cyan-slate: var(--cyan-slate);
+  --font-headline: "CohereHeadline", sans-serif;
+  --font-body: "CohereText", sans-serif;
+  --font-mono: "CohereMono", monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
